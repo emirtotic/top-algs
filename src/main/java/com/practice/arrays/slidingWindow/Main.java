@@ -1,4 +1,4 @@
-package com.practice.arrays.probaj;
+package com.practice.arrays.slidingWindow;
 
 public class Main {
 

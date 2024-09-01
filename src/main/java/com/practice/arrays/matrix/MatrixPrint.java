@@ -10,8 +10,18 @@ public class MatrixPrint {
                 {9, 10, 11, 12}
         };
 
-        print(matrica);
+        printReverse(matrica);
 
+    }
+
+    public static void printReverse(int[][] matrix) {
+
+        for (int i = matrix.length - 1; i >= 0; i--) {
+            for (int j = matrix.length; j >= 0; j--) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 
     public static void print(int[][] matrix) {
