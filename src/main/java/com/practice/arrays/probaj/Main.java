@@ -7,31 +7,29 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        int k = 3;
-        System.out.println(solution(nums, k));
+        fizzBuzz();
+
+
     }
 
-    public static int solution(int[] nums, int k) {
+    public static void fizzBuzz() {
 
-        int sum = 0;
-        int maxSum = 0;
-        int result = 0;
+        String fizz = "Fizz";
+        String buzz = "Buzz";
+        String fizzBuzz = "FizzBuzz";
 
-        for (int i = 0; i < k; i++) {
-            sum += nums[i];
+        for (int i = 1; i <= 100; i++) {
+
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println(fizzBuzz);
+            } else if (i % 3 == 0) {
+                System.out.println(fizz);
+            } else if (i % 5 == 0) {
+                System.out.println(buzz);
+            } else {
+                System.out.println(i);
+            }
         }
-
-        maxSum = sum;
-
-        for (int i = 1; i <= nums.length - k; i++) {
-            sum = sum - nums[i - 1] + nums[i + k - 1];
-            result = Math.max(sum, maxSum);
-        }
-
-
-        return result;
-
     }
 }
 
