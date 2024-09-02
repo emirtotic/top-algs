@@ -1,32 +1,59 @@
 package com.practice.arrays.slidingWindow;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-// Leetcode 209
+// Leetcode 3
 public class Task4 {
 
     public static void main(String[] args) {
 
-        int[] nums = {1, 3, -1, -3, 5, 3, 6, 7};
-        int k = 3;
+        String s = "abcabcbb";
 
-        System.out.println(maxSlidingWindow(nums, k));
+        System.out.println(lengthOfLongestSubstring(s));
 
     }
 
-    public static int[] maxSlidingWindow(int[] nums, int k) {
+    public static int lengthOfLongestSubstring(String s) {
+        int ans = 0;
+        int n = s.length();
+        int fp = 0;
+        int sp = 0;
 
-        int maxNumberInSubarray = nums[0];
-        List<Integer> list = new ArrayList<>();
-        int currentMax = Integer.MAX_VALUE;
+        Map<Character, Integer> mp = new HashMap<>();
 
-        for (int i = 1; i < nums.length - 1; i++ ) {
+        while (sp < n) {
+            addToMap(mp, s.charAt(sp));
+            while (fp < sp && !isValid(mp)) {
+                deletFromMap(mp, s.charAt(sp));
+                fp++;
+            }
 
+            int length = sp - fp + 1;
+            ans = Math.max(ans, length);
+            sp++;
         }
-
-
-        return new int[0];
+        return ans;
     }
 
+    public static void addToMap(Map<Character, Integer> mp, char c) {
+        mp.put(c, mp.getOrDefault(c, 0) + 1);
+
+    }
+
+    public static void deletFromMap(Map<Character, Integer> mp, char c) {
+        mp.put(c, mp.get(c) - 1);
+
+    }
+
+    public static boolean isValid(Map<Character, Integer> mp) {
+        for (char c : mp.keySet()) {
+            if (mp.get(c) > 1) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
