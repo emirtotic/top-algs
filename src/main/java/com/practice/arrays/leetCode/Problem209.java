@@ -1,4 +1,4 @@
-package com.practice.arrays.practiceLeetCode;
+package com.practice.arrays.leetCode;
 
 // NISAM URADIO
 public class Problem209 {

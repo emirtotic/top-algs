@@ -1,8 +1,4 @@
-package com.practice.arrays.practiceLeetCode;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
+package com.practice.arrays.leetCode;
 
 public class Problem26 {
 

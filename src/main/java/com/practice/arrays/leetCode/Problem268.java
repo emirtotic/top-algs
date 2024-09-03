@@ -1,4 +1,4 @@
-package com.practice.arrays.practiceLeetCode;
+package com.practice.arrays.leetCode;
 
 public class Problem268 {
 

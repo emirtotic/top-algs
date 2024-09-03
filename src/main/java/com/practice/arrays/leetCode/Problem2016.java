@@ -1,4 +1,4 @@
-package com.practice.arrays.practiceLeetCode;
+package com.practice.arrays.leetCode;
 
 // obnovi
 public class Problem2016 {
