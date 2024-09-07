@@ -1,4 +1,4 @@
-package com.practice.arrays.slidingWindow;
+package com.practice.arrays.algorithms.slidingWindow;
 
 /*
 Napiši funkciju u Javi koja pronalazi maksimalnu sumu podniza fiksne dužine

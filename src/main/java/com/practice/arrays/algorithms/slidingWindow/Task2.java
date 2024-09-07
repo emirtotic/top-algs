@@ -1,4 +1,4 @@
-package com.practice.arrays.slidingWindow;
+package com.practice.arrays.algorithms.slidingWindow;
 
 /*
 Naravno! Evo još jednog zadatka koji koristi tehniku sliding window:

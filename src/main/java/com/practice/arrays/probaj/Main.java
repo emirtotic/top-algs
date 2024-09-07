@@ -7,29 +7,32 @@ public class Main {
 
     public static void main(String[] args) {
 
-        fizzBuzz();
+//        int[] nums = {2, 7, 11, 15};
+//        int target = 9;
+
+        int[] nums = {2, 3, 4};
+        int target = 6;
+
+        twoSum(nums, target);
 
 
     }
 
-    public static void fizzBuzz() {
+    public static int[] twoSum(int[] numbers, int target) {
 
-        String fizz = "Fizz";
-        String buzz = "Buzz";
-        String fizzBuzz = "FizzBuzz";
+        int index = 0;
+        int[] result = new int[2];
 
-        for (int i = 1; i <= 100; i++) {
-
-            if (i % 3 == 0 && i % 5 == 0) {
-                System.out.println(fizzBuzz);
-            } else if (i % 3 == 0) {
-                System.out.println(fizz);
-            } else if (i % 5 == 0) {
-                System.out.println(buzz);
+        for (int i = 1; i < numbers.length; i++) {
+            if (target == numbers[index] + numbers[i]) {
+                result[0] = index + 1;
+                result[1] = i + 1;
             } else {
-                System.out.println(i);
+                index++;
             }
         }
+        return result;
+
     }
 }
 
