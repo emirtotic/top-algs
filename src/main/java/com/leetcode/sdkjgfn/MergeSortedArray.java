@@ -16,7 +16,6 @@ public class MergeSortedArray {
 
         printArray(merge(nums1, 1, nums2, 0));
 
-
     }
 
     public static int[] merge(int[] nums1, int m, int[] nums2, int n) {
