@@ -11,6 +11,7 @@ public class MergeSortedArray {
         int[] nums1 = {1};
         int[] nums2 = {};
 
+
         printArray(nums1);
         printArray(nums2);
 
